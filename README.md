@@ -5,4 +5,4 @@
 ###Upload videos to youtube using api
 #************************************
 
-To run the code, you have to replace the __ClientID__ and __ClientSecret__ value within the __config.php__ file with your data.
+__To run the code,__ you have to replace the __ClientID__ and __ClientSecret__ value within the __config.php__ file with your data.
