@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Circle Progress Bar Animation Example</title>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Circle Progress Bar Animation CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+	<!-- Demo CSS -->
+	<link rel="stylesheet" href="css/demo.css">
+</head>
+ <body>
+	<header class="intro">
+	<h1> Circle Progress Bar Animation Example </h1>
+	<p> A Bootstrap circle progress bar loading animation.</p>
+	<p> Written in HTML, CSS, JavaScript (jQuery, Bootstrap)... </p>
+	<div class="action">
+	<a href="https://www.codehim.com/others/bootstrap-circle-progress-bar-animation/" title="Back to download and tutorial page" class="btn back">Back to Tutorial</a>
+	<a href="https://codepen.io/rsmoke/pen/ZaobJO?__cf_chl_jschl_tk__=5ace9a2cc86aea7ca53f2f6b1cb430e902f451b1-1584810016-0-AWrJi_MYIva3qKJukYKSdMzaSb5NqmcdDEU6MmIZLTm_vr2kCZ7NkAEiqWOOfT4sBvR8pPDLJYu5kyHHC5mhE2sj-JgIvvpQ6iEcnKdD3iqvaoV7ZU_Ehp_MI9IL5mbZjL6qnK8CxtEEMmW4nfCdZiihzOUN_C2bmCTbT87tAg7HsFdUOVnkffMyAXK0igt4A5jePw-Di9ghtaSNFG_2JBH6-3XgJSfxVKCrOBvjStLRcyBsnAm4A0Hb6iKY4SexMAtfkUezzOgSwMcXoXZCE2PporjmwZC7_fBVId3ijOxRHvRdLyNAENKCMQjXEdYgAy5wbv5z4x3uTMCUoXEO8YjllztGAk6ApZd9l1o7W_mW" title="View or Fork on CodePen" class="btn fa-codepen">View on CodePen</a>
+	</div>
+	</header>
+<main>
+ <article>
+     <div class="text-center">  
+     <button id="load" class="btn btn-primary">Load Progressbar!</button>
+              
+     </div>   
+        <div class="modal js-loading-bar">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+
+                <div class="progress blue">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">Loading...</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+            <br><br><br><br><br><br><br><br><br>
+      </div> </article>
+</main>
+
+<script>
+(function(){
+this.$('.js-loading-bar').modal({
+  backdrop: 'static',
+  show: false
+});
+
+$('#load').click(function() {
+  var $modal = $('.js-loading-bar'),
+      $bar = $modal.find('.progress');
+  
+  $modal.modal('show');
+  $bar.addClass('animate');
+
+  setTimeout(function() {
+    $bar.removeClass('animate');
+    $modal.modal('hide');
+  }, 7000);
+});
+
+})(jQuery);
+</script>
+
+ </body>
+</html>
